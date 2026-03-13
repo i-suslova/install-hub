@@ -1,16 +1,117 @@
-# React + Vite
+# Install Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Demo page for installing a mobile application using QR codes and automatic device detection.
 
-Currently, two official plugins are available:
+This page helps users quickly choose the correct installation method depending on their device (iOS, Android, Desktop, etc.).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live demo:  
+https://i-suslova.github.io/install-hub/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Automatic device detection
+- Recommended installation option highlighted
+- QR codes for quick installation
+- Responsive design for desktop and mobile
+- Clean UI built with React
+- Static deployment via GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Installation Options
+
+The page currently supports four installation methods:
+
+1. **iPhone / iPad**
+   - Install via App Store
+
+2. **Android**
+   - Install APK or open Play Store
+
+3. **Desktop**
+   - Scan QR code using your mobile device
+
+4. **Alternative method**
+   - Additional installation source
+
+---
+
+## Technology Stack
+
+- React
+- Vite
+- CSS
+- GitHub Pages (deployment)
+- GitHub Actions (CI/CD)
+
+---
+
+## Local Development
+
+Clone the repository:
+
+git clone https://github.com/i-suslova/install-hub.git
+cd install-hub
+
+Install dependencies: npm install
+
+Run development server: npm run dev
+
+Open in browser: http://localhost:5173
+
+Create a production build: npm run build
+
+---
+
+## Deployment
+
+The project is automatically deployed to GitHub Pages using GitHub Actions.
+
+Every push to the main branch triggers the build and deployment workflow.
+
+Configuration is located in: .github/workflows/deploy.yml
+
+---
+
+## Project Structure
+
+install-hub
+├── public
+│   ├── qr-ios.png
+│   ├── qr-android.png
+│   ├── qr-desktop.png
+│   └── qr-alt.png
+│
+├── src
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── assets
+│
+├── index.html
+├── vite.config.js
+└── package.json
+
+---
+
+## Use Cases
+
+This page can be used for:
+
+mobile app landing pages
+
+quick install pages
+
+QR-based onboarding
+
+app distribution hubs
+
+internal corporate app distribution
+
+---
+
+## Preview
+
+![Install Hub Preview](preview-install-hub.png)
