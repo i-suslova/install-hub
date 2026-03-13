@@ -9,7 +9,7 @@ const installOptions = [
     title: "iPhone / iPad",
     description: "Скачайте приложение через App Store",
     qr: `${baseUrl}qr-ios.png`,
-    url: "https://example.com/ios",
+    // url: "https://example.com/ios",
     buttonText: "Открыть в App Store",
   },
   {
@@ -18,7 +18,7 @@ const installOptions = [
     title: "Android",
     description: "Скачайте приложение для Android",
     qr: `${baseUrl}qr-android.png`,
-    url: "https://example.com/android",
+    // url: "https://example.com/android",
     buttonText: "Открыть для Android",
   },
   {
@@ -28,7 +28,7 @@ const installOptions = [
     description:
       "Откройте нужный QR-код на экране и отсканируйте его телефоном",
     qr: `${baseUrl}qr-desktop.png`,
-    url: "https://example.com/install",
+    // url: "https://example.com/install",
     buttonText: "Открыть ссылку",
   },
   {
@@ -37,7 +37,7 @@ const installOptions = [
     title: "Ещё вариант",
     description: "Если нужен еще какой-либо магазин приложений",
     qr: `${baseUrl}qr-alt.png`,
-    url: "https://example.com/alternative",
+    // url: "https://example.com/alternative",
     buttonText: "Другой вариант",
   },
 ];
