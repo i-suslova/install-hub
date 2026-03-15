@@ -5,67 +5,52 @@ const baseUrl = import.meta.env.BASE_URL;
 const installOptions = [
   {
     id: "ios",
-    icon: "🍎",
+    icon: `${baseUrl}icon-ios.png`,
     title: "iPhone / iPad",
-    description: "Скачайте приложение через App Store",
+    description: "Установите приложение через App Store",
     qr: `${baseUrl}qr-ios.png`,
-    // url: "https://example.com/ios",
-    buttonText: "Открыть в App Store",
+    url: "https://example.com/ios",
+    buttonText: "Открыть App Store",
   },
   {
     id: "android",
-    icon: "🤖",
-    title: "Android",
-    description: "Скачайте приложение для Android",
+    icon: `${baseUrl}icon-android.png`,
+    title: "Google Play",
+    description: "Установите приложение через Google Play",
     qr: `${baseUrl}qr-android.png`,
-    // url: "https://example.com/android",
-    buttonText: "Открыть для Android",
+    url: "https://example.com/android",
+    buttonText: "Открыть Google Play",
   },
   {
-    id: "desktop",
-    icon: "💻",
-    title: "Для компьютера",
-    description:
-      "Откройте нужный QR-код на экране и отсканируйте его телефоном",
-    qr: `${baseUrl}qr-desktop.png`,
-    // url: "https://example.com/install",
-    buttonText: "Открыть ссылку",
-  },
-  {
-    id: "alternative",
-    icon: "⬇️",
-    title: "Ещё вариант",
-    description: "Если нужен еще какой-либо магазин приложений",
-    qr: `${baseUrl}qr-alt.png`,
-    // url: "https://example.com/alternative",
-    buttonText: "Другой вариант",
+    id: "rustore",
+    icon: `${baseUrl}icon-rustore.png`,
+    title: "RuStore",
+    description: "Установите приложение через RuStore",
+    qr: `${baseUrl}qr-rustore.png`,
+    url: "https://example.com/rustore",
+    buttonText: "Открыть RuStore",
   },
 ];
 
 function getDeviceType() {
   const userAgent = navigator.userAgent.toLowerCase();
 
-  const isIPhone = /iphone|ipad|ipod/.test(userAgent);
-  const isAndroid = /android/.test(userAgent);
-  const isDesktop = !isIPhone && !isAndroid;
+  if (/iphone|ipad|ipod/.test(userAgent)) return "ios";
+  if (/android/.test(userAgent)) return "android";
 
-  if (isIPhone) return "ios";
-  if (isAndroid) return "android";
-  if (isDesktop) return "desktop";
-
-  return "alternative";
+  return "desktop";
 }
 
 function getDeviceMessage(deviceType) {
   switch (deviceType) {
     case "ios":
-      return "Похоже, вы используете iPhone или iPad. Рекомендуем установить приложение через App Store.";
+      return "Вы используете iPhone или iPad. Нажмите кнопку App Store, чтобы установить приложение.";
     case "android":
-      return "Похоже, вы используете Android. Рекомендуем открыть установку для Android.";
+      return "Вы используете Android. Установите приложение через Google Play или RuStore.";
     case "desktop":
-      return "Вы открыли страницу на компьютере. Удобнее всего отсканировать нужный QR-код телефоном.";
+      return "Откройте камеру на телефоне и отсканируйте нужный QR-код, чтобы установить приложение.";
     default:
-      return "Выберите подходящий способ установки приложения.";
+      return "Выберите способ установки приложения.";
   }
 }
 
@@ -104,9 +89,19 @@ function App() {
                 </div>
               )}
 
-              <div className="card__icon" aria-hidden="true">
-                {item.icon}
-              </div>
+              <a
+                className="card__iconLink"
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Открыть: ${item.title}`}
+              >
+                <img
+                  className="card__iconImage"
+                  src={item.icon}
+                  alt={`${item.title} icon`}
+                />
+              </a>
 
               <h2>{item.title}</h2>
 
@@ -114,7 +109,14 @@ function App() {
                 <img className="qr" src={item.qr} alt={`QR-код: ${item.title}`} />
               </div>
 
-              <p className="card__description">{item.description}</p>
+              <a
+                className="card__descriptionLink"
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {item.description}
+              </a>
 
               <a
                 className="btn"
