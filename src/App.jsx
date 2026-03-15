@@ -9,7 +9,7 @@ const installOptions = [
     title: "iPhone / iPad",
     description: "Установите приложение через App Store",
     qr: `${baseUrl}qr-ios.png`,
-    url: "https://example.com/ios",
+    // url: "https://example.com/ios",
     buttonText: "Открыть App Store",
   },
   {
@@ -18,7 +18,7 @@ const installOptions = [
     title: "Google Play",
     description: "Установите приложение через Google Play",
     qr: `${baseUrl}qr-android.png`,
-    url: "https://example.com/android",
+    // url: "https://example.com/android",
     buttonText: "Открыть Google Play",
   },
   {
@@ -27,7 +27,7 @@ const installOptions = [
     title: "RuStore",
     description: "Установите приложение через RuStore",
     qr: `${baseUrl}qr-rustore.png`,
-    url: "https://example.com/rustore",
+    // url: "https://example.com/rustore",
     buttonText: "Открыть RuStore",
   },
 ];
