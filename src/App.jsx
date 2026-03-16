@@ -1,6 +1,7 @@
 import "./App.css";
 
 const baseUrl = import.meta.env.BASE_URL;
+const appLogo = `${baseUrl}logo-kovi-diet.png`;
 
 const installOptions = [
   {
@@ -62,7 +63,20 @@ function App() {
     <main className="install-page">
       <section className="hero-section">
         <p className="eyebrow">Быстрая установка</p>
-        <h1>Установите приложение</h1>
+
+        <div className="hero-titleRow">
+          <img
+            className="hero-logo"
+            src={appLogo}
+            alt="Логотип KOVI DIET"
+          />
+
+          <div className="hero-titleText">
+            <h1>Установите приложение</h1>
+            <h2 className="hero-appName">KOVI DIET</h2>
+          </div>
+        </div>
+
         <p className="subtitle">
           Выберите подходящий способ установки. Отсканируйте QR-код или нажмите
           кнопку ниже.
@@ -103,7 +117,7 @@ function App() {
                 />
               </a>
 
-              <h2>{item.title}</h2>
+              <h3 className="card__title">{item.title}</h3>
 
               <div className="qr-wrap">
                 <img className="qr" src={item.qr} alt={`QR-код: ${item.title}`} />
