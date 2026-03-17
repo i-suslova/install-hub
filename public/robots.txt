@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kovidiet.crossapp.pro/sitemap.xml
