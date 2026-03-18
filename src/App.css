@@ -272,16 +272,16 @@
     display: inline-flex;
   }
 
- .card h2 {
-  margin: 0 0 16px;
-  font-size: 24px;
-  line-height: 1.2;
-  min-height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  .card h2 {
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 1.2;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
   .qr-wrap {
     width: 180px;
@@ -303,6 +303,11 @@
     flex-direction: column;
     gap: 12px;
     margin-bottom: 14px;
+  }
+
+  .hero-titleText h1 {
+    /* color: #6d28d9; */
+    line-height: 34px;
   }
 
   .hero-logo {

@@ -5,7 +5,7 @@ Demo page for installing a mobile application using QR codes and automatic devic
 This page helps users quickly choose the correct installation method depending on their device (iOS, Android, Desktop, etc.).
 
 Live demo:  
-https://i-suslova.github.io/install-hub/
+https://kovidiet.crossapp.pro
 
 ---
 
