@@ -1,0 +1,52 @@
+{
+  "name": "Kovi: ИИ-дневник питания",
+  "short_name": "Kovi: ИИ",
+  "id": "/index.html",
+  "icons": [
+    {
+      "src": "/favicons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-web.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/screenshot-mobile.png",
+      "sizes": "320x480",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "description": "Установка приложения Kovi: ИИ-дневник питания",
+  "theme_color": "#b9d5e0",
+  "background_color": "#b9d5e0",
+  "display": "standalone",
+   "start_url": "/index.html",
+  "scope": "/",
+  "manifest_version": 1
+}

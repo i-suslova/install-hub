@@ -1,7 +1,7 @@
 import "./App.css";
 
 const baseUrl = import.meta.env.BASE_URL;
-const appLogo = `${baseUrl}logo-kovi-diet.png`;
+const appLogo = `${baseUrl}logo-kovi-diet.webp`;
 
 const installOptions = [
   {
