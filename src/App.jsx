@@ -2,35 +2,50 @@ import "./App.css";
 
 const baseUrl = import.meta.env.BASE_URL;
 const appLogo = `${baseUrl}logo-kovi-diet.webp`;
+const appFeatures = [
+  "Подсчёт калорий и нутриентов (КБЖУ)",
+  "Распознавание еды по фото с помощью ИИ",
+  "Голосовой ввод продуктов",
+  "Сканирование штрихкодов продуктов",
+  "Недельные планы питания от ИИ",
+  "Рецепты с пошаговыми инструкциями",
+  "Список покупок на основе плана питания",
+  "Синхронизация с Health Connect (шаги, активные калории)",
+  "Анализ рациона и персональные рекомендации",
+  "Трекер воды",
+  "Отслеживание веса",
+];
 
 const installOptions = [
   {
     id: "ios",
     icon: `${baseUrl}icon-ios.png`,
     title: "iPhone / iPad",
-    description: "Установите приложение через App Store",
+    description: "Установите бета-версию приложение через App Store",
     qr: `${baseUrl}qr-ios.png`,
-    // url: "https://example.com/ios",
+    url: "https://testflight.apple.com/join/cVASPB4J",
     buttonText: "Открыть App Store",
   },
-  {
-    id: "android",
-    icon: `${baseUrl}icon-android.png`,
-    title: "Google Play",
-    description: "Установите приложение через Google Play",
-    qr: `${baseUrl}qr-android.png`,
-    // url: "https://example.com/android",
-    buttonText: "Открыть Google Play",
-  },
-  {
+    {
     id: "rustore",
     icon: `${baseUrl}icon-rustore.png`,
     title: "RuStore",
     description: "Установите приложение через RuStore",
     qr: `${baseUrl}qr-rustore.png`,
-    // url: "https://example.com/rustore",
+    url: "https://www.rustore.ru/catalog/app/com.danilapryadko.kovidiet",
     buttonText: "Открыть RuStore",
   },
+  {
+    id: "android",
+    icon: `${baseUrl}icon-android.png`,
+    title: "Google Play",
+    // description: "Установите приложение через Google Play",
+    qr: `${baseUrl}qr-android.png`,
+    // url: "https://example.com/android",
+    // buttonText: "Открыть Google Play",
+    buttonText: "Скоро в Google Play",
+  },
+
 ];
 
 function getDeviceType() {
@@ -68,18 +83,18 @@ function App() {
           <img
             className="hero-logo"
             src={appLogo}
-            alt="Логотип KOVI DIET"
+            alt="Логотип приложения KoviDiet для подсчёта калорий и КБЖУ"
           />
 
           <div className="hero-titleText">
-            <h1>Установите приложение</h1>
-            <h2 className="hero-appName">KOVI DIET</h2>
+            <h1>Kovi Diet - приложение для подсчёта калорий и КБЖУ</h1>
+            <p className="hero-appName">KOVI DIET</p>
           </div>
         </div>
 
         <p className="subtitle">
-          Выберите подходящий способ установки. Отсканируйте QR-код или нажмите
-          кнопку ниже.
+          Установите приложение для контроля питания: счётчик калорий и КБЖУ,
+          распознавание еды по фото, сканер штрихкодов, трекер воды и веса.
         </p>
 
         <div className="device-hint">
@@ -89,6 +104,7 @@ function App() {
       </section>
 
       <section className="cards">
+      
         {installOptions.map((item) => {
           const isRecommended = item.id === deviceType;
 
@@ -113,16 +129,28 @@ function App() {
                 <img
                   className="card__iconImage"
                   src={item.icon}
-                  alt={`${item.title} icon`}
+                  alt={`Иконка магазина приложений: ${item.title}`}
                 />
               </a>
 
               <h3 className="card__title">{item.title}</h3>
 
-              <div className="qr-wrap">
-                <img className="qr" src={item.qr} alt={`QR-код: ${item.title}`} />
-              </div>
-
+              <div className="qr-wrap">               
+                <a
+                  className="qr-wrap qr-wrap--link"
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Открыть страницу загрузки: ${item.title}`}
+                >
+                  <img
+                    className="qr"
+                    src={item.qr}
+                    alt={`QR-код: ${item.title}`}
+                  />
+                </a> 
+                </div>
+             
               <a
                 className="card__descriptionLink"
                 href={item.url}
@@ -145,8 +173,21 @@ function App() {
         })}
       </section>
 
+      {/* <section className="help">
+        <h2>Функции приложения KoviDiet</h2>
+        <p>
+          KoviDiet помогает вести дневник питания, считать калории и нутриенты,
+          а также получать рекомендации по рациону на основе ваших данных.
+        </p>
+        <ul>
+          {appFeatures.map((feature) => (
+            <li key={feature}>{feature}</li>
+          ))}
+        </ul>
+      </section> */}
+
       <section className="help">
-        <h3>Нужна помощь?</h3>
+        <h2>Как установить приложение</h2>
         <p>
           Если вы уже открыли страницу с телефона, просто нажмите кнопку под
           нужным вариантом.
