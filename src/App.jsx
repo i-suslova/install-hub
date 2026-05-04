@@ -39,11 +39,11 @@ const installOptions = [
     id: "android",
     icon: `${baseUrl}icon-android.png`,
     title: "Google Play",
-    // description: "Установите приложение через Google Play",
+    description: "Установите приложение через Google Play",
     qr: `${baseUrl}qr-android.png`,
-    // url: "https://example.com/android",
-    // buttonText: "Открыть Google Play",
-    buttonText: "Скоро в Google Play",
+    url: "https://play.google.com/store/apps/details?id=com.danilapryadko.kovidiet&pcampaignid=web_share",
+    buttonText: "Открыть Google Play",
+    
   },
 
 ];
